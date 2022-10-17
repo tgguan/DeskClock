@@ -103,5 +103,20 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1513155413-9065-small_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1513155413-9065-small_09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1513155413-9065-small_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1513155413-9065-small_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

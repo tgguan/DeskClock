@@ -13,6 +13,7 @@ using DSkin.Forms;
 
 using System.IO;
 using DSkin.Controls;
+using DSkin.Html.Adapters.Entities;
 
 namespace DeskClock
 {
@@ -26,10 +27,16 @@ namespace DeskClock
 
         public bool autorun = false;//开机启动
         public bool ShowText = true;//显示文字
+        public bool ChooseColor1 = false;
+        public bool ChooseColor2 = false;
+        public bool ShowSecText = true;
+        public int tempcount = 0; //右键计数器
         public string TimeSet= "2023/01/22 00:00:00"; //设定时间
         public string TextSet= "距离2023年春节";//设定文字
         public string TextFont;
+        public string TextColor;
         public string NumFont;
+        public string NumColor;
         public string DayColor1;
         public string DayColor2;
         public string DayColor3;
@@ -42,8 +49,8 @@ namespace DeskClock
         public string SecondColor1;
         public string SecondColor2;
         public string SecondColor3;
-        public bool ChooseColor1 = false;
-        public bool ChooseColor2 = false;
+        public string localtxt;
+
 
 
         public int tempnum = 0; //右键计数器
@@ -58,28 +65,32 @@ namespace DeskClock
         public mainForm()
         {
             InitializeComponent();
-            checkconfigini();
+            
             configpath = path + @"\config.ini";
-            softpath = path + @"\Hi.exe";
-            
-            
+            Checkconfigini();
+
+
+
         }
         //public string exepath = AppDomain.CurrentDomain.SetupInformation.ApplicationBase;
 
         #region 配置文件初始化
-        private void checkconfigini()
+        private void Checkconfigini()
         {
             if (!File.Exists(configpath))
             {
-                MessageBox.Show("yes");
+                
                 try
                 {
+                    //初始化参数
+                   // newconfig = autorunflag + "|" + this.Location.X + "|" + this.Location.Y + "|" + soft_color + "|" + soft_op + "|" + size_x + "|" + size_y + "|" + yiyanflag + "|" + menuflag + "|" + FontSize + "|" + Blow_Flag + "|" + font_color;
+                   // System.IO.File.WriteAllText(configpath, newconfig);
 
                 }
                 catch (Exception)
                 {
 
-                    MessageBox.Show("配置文件损坏或丢失，重置配置文件");
+                    MessageBox.Show("配置文件损坏或丢失，按确定键重置配置文件");
                     
 
 
@@ -101,7 +112,7 @@ namespace DeskClock
             }
         }
 
-        private void setconfig()//设置配置文件
+        private void Setconfig()//设置配置文件
         {
 
             //newconfig = autorunflag + "|" + soft_x + "|" + soft_y + "|" + soft_color + "|" + soft_op + "|" + size_x + "|" + size_y + "|" + yiyanflag + "|" + menuflag + "|" + FontSize + "|" + Blow_Flag + "|" + font_color;
@@ -124,7 +135,7 @@ namespace DeskClock
         public const int WM_SYSCOMMAND = 0x0112;
         public const int SC_MOVE = 0xF010;
         public const int HTCAPTION = 0x0002;
-        public int tempcount=0;
+       
 
 
 
@@ -136,7 +147,7 @@ namespace DeskClock
             SendMessage(this.Handle, WM_SYSCOMMAND, SC_MOVE + HTCAPTION, 0);
         }
         #endregion
-        private void opensetting(object sender, MouseEventArgs e)
+        private void Opensetting(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {

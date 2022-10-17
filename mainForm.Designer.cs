@@ -38,6 +38,7 @@
             this.DayBar = new CircularProgressBar.CircularProgressBar();
             this.Titlelabel = new DSkin.Controls.DSkinLabel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.OneLinetext = new DSkin.Controls.DSkinLabel();
             this.dSkinPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,10 +49,11 @@
             this.dSkinPanel1.Controls.Add(this.MinuteBar);
             this.dSkinPanel1.Controls.Add(this.HourBar);
             this.dSkinPanel1.Controls.Add(this.DayBar);
-            this.dSkinPanel1.Location = new System.Drawing.Point(4, 147);
+            this.dSkinPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dSkinPanel1.Location = new System.Drawing.Point(4, 170);
             this.dSkinPanel1.Name = "dSkinPanel1";
             this.dSkinPanel1.RightBottom = ((System.Drawing.Image)(resources.GetObject("dSkinPanel1.RightBottom")));
-            this.dSkinPanel1.Size = new System.Drawing.Size(666, 158);
+            this.dSkinPanel1.Size = new System.Drawing.Size(664, 158);
             this.dSkinPanel1.TabIndex = 1;
             this.dSkinPanel1.Text = "dSkinPanel1";
             // 
@@ -65,7 +67,7 @@
             this.SecendBar.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.SecendBar.InnerMargin = 2;
             this.SecendBar.InnerWidth = -1;
-            this.SecendBar.Location = new System.Drawing.Point(514, 3);
+            this.SecendBar.Location = new System.Drawing.Point(513, 3);
             this.SecendBar.MarqueeAnimationSpeed = 2000;
             this.SecendBar.Maximum = 600;
             this.SecendBar.Name = "SecendBar";
@@ -75,7 +77,7 @@
             this.SecendBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.SecendBar.ProgressWidth = 15;
             this.SecendBar.SecondaryFont = new System.Drawing.Font("宋体", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.SecendBar.Size = new System.Drawing.Size(148, 144);
+            this.SecendBar.Size = new System.Drawing.Size(150, 150);
             this.SecendBar.StartAngle = 270;
             this.SecendBar.Step = 1;
             this.SecendBar.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
@@ -88,7 +90,7 @@
             this.SecendBar.Text = "0";
             this.SecendBar.TextMargin = new System.Windows.Forms.Padding(0);
             this.SecendBar.Value = 450;
-            this.SecendBar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.opensetting);
+            this.SecendBar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Opensetting);
             this.SecendBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form_MouseMove);
             // 
             // MinuteBar
@@ -101,7 +103,7 @@
             this.MinuteBar.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.MinuteBar.InnerMargin = 2;
             this.MinuteBar.InnerWidth = -1;
-            this.MinuteBar.Location = new System.Drawing.Point(341, 3);
+            this.MinuteBar.Location = new System.Drawing.Point(343, 3);
             this.MinuteBar.MarqueeAnimationSpeed = 2000;
             this.MinuteBar.Maximum = 600;
             this.MinuteBar.Name = "MinuteBar";
@@ -111,7 +113,7 @@
             this.MinuteBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(255)))), ((int)(((byte)(187)))));
             this.MinuteBar.ProgressWidth = 15;
             this.MinuteBar.SecondaryFont = new System.Drawing.Font("宋体", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.MinuteBar.Size = new System.Drawing.Size(148, 144);
+            this.MinuteBar.Size = new System.Drawing.Size(150, 150);
             this.MinuteBar.StartAngle = 270;
             this.MinuteBar.Step = 1;
             this.MinuteBar.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
@@ -124,7 +126,7 @@
             this.MinuteBar.Text = "0";
             this.MinuteBar.TextMargin = new System.Windows.Forms.Padding(0);
             this.MinuteBar.Value = 450;
-            this.MinuteBar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.opensetting);
+            this.MinuteBar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Opensetting);
             this.MinuteBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form_MouseMove);
             // 
             // HourBar
@@ -137,7 +139,7 @@
             this.HourBar.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.HourBar.InnerMargin = 2;
             this.HourBar.InnerWidth = -1;
-            this.HourBar.Location = new System.Drawing.Point(170, 3);
+            this.HourBar.Location = new System.Drawing.Point(173, 3);
             this.HourBar.MarqueeAnimationSpeed = 2000;
             this.HourBar.Maximum = 600;
             this.HourBar.Name = "HourBar";
@@ -147,7 +149,7 @@
             this.HourBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
             this.HourBar.ProgressWidth = 15;
             this.HourBar.SecondaryFont = new System.Drawing.Font("宋体", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.HourBar.Size = new System.Drawing.Size(148, 144);
+            this.HourBar.Size = new System.Drawing.Size(150, 150);
             this.HourBar.StartAngle = 270;
             this.HourBar.Step = 1;
             this.HourBar.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
@@ -160,7 +162,7 @@
             this.HourBar.Text = "0";
             this.HourBar.TextMargin = new System.Windows.Forms.Padding(0);
             this.HourBar.Value = 450;
-            this.HourBar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.opensetting);
+            this.HourBar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Opensetting);
             this.HourBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form_MouseMove);
             // 
             // DayBar
@@ -168,7 +170,7 @@
             this.DayBar.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
             this.DayBar.AnimationSpeed = 500;
             this.DayBar.BackColor = System.Drawing.Color.Transparent;
-            this.DayBar.Font = new System.Drawing.Font("宋体", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.DayBar.Font = new System.Drawing.Font("幼圆", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.DayBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.DayBar.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.DayBar.InnerMargin = 2;
@@ -182,8 +184,8 @@
             this.DayBar.OuterWidth = 25;
             this.DayBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
             this.DayBar.ProgressWidth = 15;
-            this.DayBar.SecondaryFont = new System.Drawing.Font("宋体", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.DayBar.Size = new System.Drawing.Size(148, 144);
+            this.DayBar.SecondaryFont = new System.Drawing.Font("幼圆", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.DayBar.Size = new System.Drawing.Size(150, 150);
             this.DayBar.StartAngle = 270;
             this.DayBar.Step = 1;
             this.DayBar.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
@@ -191,31 +193,49 @@
             this.DayBar.SubscriptText = "";
             this.DayBar.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.DayBar.SuperscriptMargin = new System.Windows.Forms.Padding(0);
-            this.DayBar.SuperscriptText = "";
+            this.DayBar.SuperscriptText = "天";
             this.DayBar.TabIndex = 0;
             this.DayBar.Text = "0";
             this.DayBar.TextMargin = new System.Windows.Forms.Padding(0);
             this.DayBar.Value = 450;
-            this.DayBar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.opensetting);
+            this.DayBar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Opensetting);
             this.DayBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form_MouseMove);
             // 
             // Titlelabel
             // 
             this.Titlelabel.AutoSize = false;
             this.Titlelabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Titlelabel.EffectValue = 0;
             this.Titlelabel.Font = new System.Drawing.Font("幼圆", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Titlelabel.Location = new System.Drawing.Point(4, 34);
             this.Titlelabel.Name = "Titlelabel";
             this.Titlelabel.Size = new System.Drawing.Size(664, 59);
             this.Titlelabel.TabIndex = 2;
+            this.Titlelabel.Text = "占位符";
             this.Titlelabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Titlelabel.TextEffect = DSkin.DirectUI.TextEffects.Glow;
+            // 
+            // OneLinetext
+            // 
+            this.OneLinetext.AutoSize = false;
+            this.OneLinetext.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.OneLinetext.EffectValue = 0;
+            this.OneLinetext.Font = new System.Drawing.Font("幼圆", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.OneLinetext.Location = new System.Drawing.Point(4, 110);
+            this.OneLinetext.Name = "OneLinetext";
+            this.OneLinetext.Size = new System.Drawing.Size(664, 60);
+            this.OneLinetext.TabIndex = 3;
+            this.OneLinetext.Text = "一言占位符 ";
+            this.OneLinetext.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.OneLinetext.TextEffect = DSkin.DirectUI.TextEffects.Glow;
             // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.ClientSize = new System.Drawing.Size(672, 307);
+            this.ClientSize = new System.Drawing.Size(672, 332);
+            this.Controls.Add(this.OneLinetext);
             this.Controls.Add(this.Titlelabel);
             this.Controls.Add(this.dSkinPanel1);
             this.MaximizeBox = false;
@@ -240,6 +260,7 @@
         public CircularProgressBar.CircularProgressBar HourBar;
         public DSkin.Controls.DSkinLabel Titlelabel;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        public DSkin.Controls.DSkinLabel OneLinetext;
     }
 }
 

@@ -59,5 +59,45 @@ namespace DeskClock.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap _1513155413_9065_small_05 {
+            get {
+                object obj = ResourceManager.GetObject("1513155413-9065-small_05", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap _1513155413_9065_small_09 {
+            get {
+                object obj = ResourceManager.GetObject("1513155413-9065-small_09", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap _1513155413_9065_small_11 {
+            get {
+                object obj = ResourceManager.GetObject("1513155413-9065-small_11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap _1513155413_9065_small_13 {
+            get {
+                object obj = ResourceManager.GetObject("1513155413-9065-small_13", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
